@@ -71,12 +71,12 @@ module Pod
       `rm -rf templates/swift/Example/PROJECT`
 
       # Replace the Podfile with a simpler one with only one target
-      podfile_path = project_folder + "/Podfile"
+      podfile_path = "Podfile"
       podfile_text = <<-RUBY
 use_frameworks!
 target '#{test_target.name}' do
   pod '#{@configurator.pod_name}', :path => '../'
-  
+
   ${INCLUDED_PODS}
 end
 RUBY
