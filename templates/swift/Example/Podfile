@@ -12,7 +12,7 @@ target '${POD_NAME}_Example' do
 
   use_frameworks!
 
-  project 'Example/${POD_NAME}'
+  project '${POD_NAME}'
 
   local_pods
 
@@ -25,16 +25,16 @@ target '${POD_NAME}_Example' do
   end
 end
 
-target '${POD_NAME}' do
-  use_frameworks!
-
-  local_pods
-
-  target '${POD_NAME}_Tests' do
-
-    pod '${POD_NAME}', :path => '../'
-    pod 'SnapshotTesting'
-
-  end
-
-end
+# target '${POD_NAME}' do
+#   use_frameworks!
+#
+#   local_pods
+#
+#   target '${POD_NAME}_Tests' do
+#
+#     pod '${POD_NAME}', :path => '../'
+#     pod 'SnapshotTesting'
+#
+#   end
+#
+# end
